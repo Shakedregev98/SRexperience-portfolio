@@ -761,6 +761,27 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* גורם ללוגו ולתפריט לשבת אחד מעל השני במקום זה לצד זה */
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap; /* גורם ללינקים לרדת שורה אם אין להם מקום */
+        justify-content: center;
+        gap: 10px; /* רווח קטן ונקי בין הלינקים */
+        margin-top: 8px;
+    }
+
+    header nav a {
+        font-size: 14px; /* מקטין מעט את הטקסט כדי שיכנס ברוחב המסך */
+    }
+}
+
 /* הגדרת הבסיס לכל התמונות - שינוי ל-cover אמיתי ומלא */
 .pillar-scan-img {
     position: absolute;
