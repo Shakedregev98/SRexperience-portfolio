@@ -771,6 +771,35 @@ footer {
         justify-content: center !important; /* ממרכז את כפתור הורדת קורות החיים */
         margin-top: 30px !important;
     }
+
+    /* דריסת הגריד האופקי של כרטיסי הפירוט ומעבר למבנה אנכי במובייל */
+    .breakdown-card {
+        grid-template-columns: 1fr !important; /* הופך את שני הטורים לטור אחד מעל השני */
+        display: flex !important;
+        flex-direction: column !important; /* מבטיח זרימה מלמעלה למטה */
+        gap: 20px !important; /* רווח נקי בין הטקסט לתמונה/מדיה */
+    }
+
+    /* התאמת אזור הטקסט למובייל */
+    .breakdown-content {
+        padding: 20px !important; /* מצמצם את ה-35px של המחשב כדי שלא יחנק בנייד */
+        text-align: left; /* שומר על יישור הטקסט הטכני בצורה קריאה */
+    }
+
+    /* התאמת אזור המדיה (תמונה/גיף/וידאו) */
+    .breakdown-media-box {
+        border-left: none !important; /* מעלים את הקו המפריד הצידי של המחשב */
+        border-top: 1px solid var(--border) !important; /* הופך אותו לקו מפריד עליון/תחתון נקי */
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px; /* נותן נפח מינימלי למדיה */
+    }
+
+    .breakdown-media-box img {
+        width: 100% !important; /* מכריח את תמונת הטיימליין/מדיה להתאים לרוחב הנייד */
+        height: auto !important;
+        object-fit: contain !important;
+    }
 }
 
 /* --- מסכים קטנים מאוד (600px ומטה) --- */
