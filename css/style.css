@@ -657,10 +657,6 @@ footer {
         box-sizing: border-box !important;
     }
 
-    .studio-logo { 
-        display: none; 
-    }
-
     /* פירוק גרידים לטור אחד אנכי אחיד (כולל עמודי ה-Hub והפרויקטים) */
     .pillars-grid, .projects-grid, .breakdown-grid, .project-metadata-grid {
         grid-template-columns: 1fr !important;
@@ -775,9 +771,7 @@ footer {
     }
 
     /* מחביא את שורת ה-EST */
-    header .lang-switch, 
-    header span:contains("EST"),
-    header div:contains("EST") { 
+    header .lang-switch { 
         display: none !important; 
     }
 
@@ -844,6 +838,7 @@ footer {
     /* קלאס שייפתח את התפריט (יופעל ע"י ה-JS) */
     header .nav-menu.active {
         left: 0; /* דוחף את התפריט לתוך המסך */
+        display: flex !important;
     }
 
     /* אפקט הפיכת ההמבורגר ל-X כשהתפריט פתוח */

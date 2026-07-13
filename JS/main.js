@@ -54,9 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav-menu');
 
