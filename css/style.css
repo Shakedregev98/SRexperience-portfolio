@@ -1,0 +1,879 @@
+/* ==========================================================================
+   1. Core Framework & Typography Injection
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&family=Inter:wght@200;400;600&display=swap');
+
+:root {
+    --background: oklch(0.185 0.004 260);
+    --foreground: oklch(0.94 0.003 260);
+    --surface: oklch(0.215 0.004 260);
+    --surface-elevated: oklch(0.245 0.005 260);
+    --muted-foreground: oklch(0.62 0.006 260);
+    --border: oklch(0.28 0.004 260 / 60%);
+    --border-strong: oklch(0.4 0.005 260 / 80%);
+    
+    --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    border-color: var(--border);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. Global Navigation Header
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    z-index: 100;
+    background: color-mix(in oklab, var(--background) 55%, transparent);
+    backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+}
+
+.lang-switch {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted-foreground);
+    cursor: pointer;
+    flex-shrink: 0; 
+}
+
+.lang-switch span.active {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.studio-logo {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+nav a {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--foreground);
+}
+
+/* ==========================================================================
+   3. Landing Hero Showcase
+   ========================================================================== */
+.hero-section {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 50px 40px 50px;
+}
+
+.tech-tag {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    font-weight: 200;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.slogan {
+    font-size: 15px;
+    color: var(--muted-foreground);
+    margin-top: 15px;
+    margin-bottom: 45px;
+    font-weight: 300;
+}
+
+.showreel-frame {
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--surface-elevated), var(--surface));
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--muted-foreground);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.showreel-frame::before, .showreel-frame::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: var(--border-strong);
+    border-style: solid;
+}
+.showreel-frame::before {
+    top: 12px; left: 12px;
+    border-width: 1px 0 0 1px;
+}
+.showreel-frame::after {
+    bottom: 12px; right: 12px;
+    border-width: 0 1px 1px 0;
+}
+
+/* ==========================================================================
+   4. Core Disciplines Hub
+   ========================================================================== */
+.hub-section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.hub-header h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.pillars-tag {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pillar-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.pillar-media-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(135deg, var(--surface-elevated), var(--surface));
+    border: 1px solid var(--border);
+    position: relative; /* קריטי: כדי שהתמונות החדשות יידעו להתיישר לפיו */
+    overflow: hidden;   /* קריטי: כדי שההגדלה של התמונות לא תגלוש מהריבוע */
+    background-color: #000; /* מונע פלאש לבן במעברים */
+    margin-bottom: 20px;
+}
+
+.pillar-media-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 10px; left: 10px;
+    width: 10px; height: 10px;
+    border-top: 1px solid var(--border-strong);
+    border-left: 1px solid var(--border-strong);
+    z-index: 2;
+}
+
+.pillar-media {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #2a2a35 0%, transparent 70%);
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 
+        filter 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.pillar-card:hover .pillar-media {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.04);
+}
+
+.pillar-info h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+    letter-spacing: -0.01em;
+}
+
+.pillar-tags {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+.pillar-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.view-link {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   5. Category Hub Pages (Games, XR, 3D)
+   ========================================================================== */
+.category-hero {
+    padding: 160px 50px 40px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-meta {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--muted-foreground);
+    margin-bottom: 10px;
+}
+
+.category-hero h1 {
+    font-size: 48px;
+    font-weight: 200;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.02em;
+}
+
+.category-desc {
+    font-size: 14px;
+    color: var(--muted-foreground);
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.projects-section {
+    padding: 20px 50px 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.project-item-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-thumb-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 
+        filter 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.project-item-card:hover .project-thumb {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.project-meta-info .project-number {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--muted-foreground);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-meta-info h3 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+    letter-spacing: -0.01em;
+}
+
+.project-tech-stack {
+    font-size: 11px;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+/* ==========================================================================
+   6. Individual Case Studies & Global Structural Tightening
+   ========================================================================== */
+.project-hero {
+    padding: 160px 50px 20px 50px; /* צומצם הפדינג התחתון מ-40px כדי להרים את המבנה */
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 25px; /* פתרון רוחבי: כיווץ מרווח תחתון גלובלי מתחת למדיה הראשית */
+}
+
+.project-category-tag {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--muted-foreground);
+    margin-bottom: 10px;
+}
+
+.project-hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 200;
+    margin: 0 0 30px 0; /* הורדה מ-40px */
+    letter-spacing: -0.02em;
+}
+
+.project-main-media {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* גריד מטא-דאטה (STAR System) - הידוק אחיד בכל האתר */
+.project-metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px; /* הידוק המרווח בין עמודות ה-STAR */
+    max-width: 1100px;
+    margin: 30px auto 45px auto; /* כיווץ אגרסיבי של ה-margin התחתון מ-80px ל-45px כדי למשוך את הברייקדאון למעלה */
+    padding: 0 50px;
+}
+
+.meta-block h4 {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--foreground);
+    margin: 0 0 12px 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.meta-block p {
+    font-size: 13px;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.project-link {
+    display: block;
+    font-size: 13px;
+    color: var(--foreground);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+.project-link:hover { color: var(--muted-foreground); }
+
+/* שליטה גלובלית רוחבית בקו מפריד ליצירת Visual Cue מושלם */
+hr {
+    border: 0;
+    border-top: 1px solid #222;
+    margin: 30px 0 25px 0; /* הידוק מרווח הקו המפריד בכל האתר */
+}
+
+/* ==========================================================================
+   7. Before/After Interactive Component
+   ========================================================================== */
+.slider-section {
+    max-width: 1100px;
+    margin: 0 auto 100px auto;
+    padding: 0 50px;
+}
+
+.slider-header {
+    margin-bottom: 30px;
+}
+
+.slider-header h3 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.01em;
+}
+
+.slider-header p {
+    font-size: 13px;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+.before-after-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    cursor: ew-resize;
+}
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-before {
+    width: 50%;
+    border-right: 1px solid transparent;
+    z-index: 2;
+}
+
+.img-after {
+    z-index: 1;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: var(--foreground);
+    z-index: 3;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.handle-line {
+    flex-grow: 1;
+    width: 1px;
+    background-color: var(--border-strong);
+}
+
+.handle-button {
+    width: 36px;
+    height: 36px;
+    background-color: var(--background);
+    border: 1px solid var(--border-strong);
+    color: var(--foreground);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ==========================================================================
+   8. Technical Breakdown Grid Architecture
+   ========================================================================== */
+.breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 10px auto 100px auto; /* מרווח עליון מינימלי של 10px כדי להיצמד באלגנטיות לקו ה-HR המציץ */
+    padding: 0 50px;
+}
+
+.breakdown-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0;
+    overflow: hidden;
+}
+
+.breakdown-media-box {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--surface-elevated);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.breakdown-content {
+    padding: 25px;
+}
+
+.breakdown-content h3 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.01em;
+}
+
+.breakdown-content p {
+    font-size: 13px;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.phone-mockup {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 576 / 1280;
+    margin: 30px auto 0 auto; /* צמצום קל של המרווח העליון מ-40px */
+    border: 1px solid var(--border-strong);
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* ==========================================================================
+   9. Global Layout Footer
+   ========================================================================== */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted-foreground);
+    letter-spacing: 0.05em;
+}
+
+.footer-links a {
+    color: var(--muted-foreground);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--foreground);
+}
+
+/* ============================================================
+   10. Comprehensive Media Queries (Responsive Engineering)
+   ============================================================ */
+
+/* --- טאבלטים ומסכים בינוניים (900px ומטה) --- */
+@media (max-width: 900px) {
+    .project-metadata-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- סמארטפונים ומסכים קטנים (768px ומטה) - בלוק מאוחד סופי --- */
+@media (max-width: 768px) {
+    
+    /* ריווחים כלליים ומניעת בריחת קצוות במובייל */
+    header, .hero-section, .hub-section, footer, .category-hero, .projects-section, .project-hero, .slider-section, .breakdown-grid {
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .studio-logo { 
+        display: none; 
+    }
+
+    /* פירוק גרידים לטור אחד אנכי אחיד (כולל עמודי ה-Hub והפרויקטים) */
+    .pillars-grid, .projects-grid, .breakdown-grid, .project-metadata-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+
+    /* סידור אלמנטים בברייקדאון (הסליידר יעלה מעל הטקסט) */
+    .slider-container-wrapper {
+        order: 1 !important;
+        width: 100% !important;
+    }
+
+    .breakdown-content {
+        order: 2 !important;
+        width: 100% !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    .breakdown-block {
+        margin-bottom: 25px !important;
+    }
+
+    .before-after-container {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    /* תיקון אבסולוטי לכותרות - מונע חיתוך של XR, GAMES וכותרות פרויקטים */
+    .category-hero h1,
+    .project-hero h1,
+    .hero-section h1,
+    .hub-section h1,
+    section h1,
+    h1 {
+        font-size: 26px !important; /* גודל מהודק שמתאים בול ל-360 פיקסלים */
+        line-height: 1.2 !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        word-break: break-word !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 10px 0 !important;
+        letter-spacing: normal !important;
+    }
+    
+    /* התאמת אזורי ה-Hero במובייל שלא יגלשו ימינה ושמאלה */
+    .project-hero,
+    .category-hero {
+        padding: 30px 15px !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .project-category-tag {
+        font-size: 10px !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .meta-block {
+        text-align: left !important;
+        padding: 0 !important;
+    }
+
+    /* פוטר במובייל */
+    footer { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center; 
+    }
+    
+    .category-meta {
+        display: block !important;
+        visibility: visible !important;
+        font-size: 11px !important;
+        letter-spacing: 0.05em !important;
+        margin-bottom: 8px !important; /* ריווח בינו לבין ה-h1 שמתחתיו */
+        color: var(--muted-foreground) !important;
+        opacity: 0.8 !important;
+    }
+
+    /* הוספת מרווח עליון לכל אזור ה-Hero של הקטגוריה כדי למנוע דריסה מהתפריט */
+    .category-hero {
+        padding-top: 60px !important; /* דוחף את כל הבלוק קצת למטה כדי שהאלמנט העליון ייחשף */
+        padding-bottom: 25px !important;
+    }
+}
+
+/* --- מסכים קטנים מאוד (600px ומטה) --- */
+@media (max-width: 600px) {
+    .project-metadata-grid {
+        padding: 0 20px !important;
+    }
+}
+
+/* הגדרת הבסיס לכל התמונות - שינוי ל-cover אמיתי ומלא */
+.pillar-scan-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* מפתח מס' 1: מכריח את התמונה למלא את כל הריבוע ללא שוליים */
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.3s ease; /* חזרה חלקה בגודל */
+    transform: scale(1); /* גודל רגיל כברירת מחדל */
+}
+
+/* התמונה הראשונה מוצגת כברירת מחדל */
+.pillar-scan-img.img-1 {
+    opacity: 1;
+}
+
+/* מפתח מס' 2: ברגע שיש הובר על הכרטיס, אנחנו מגדילים את הדיב של התמונה עצמו ל-1.4 (כלומר 140%) */
+.pillar-card:hover .pillar-scan-img {
+    transform: scale(1.4); 
+}
+
+/* הפעלת הלופ הרגיל (3 תמונות) עבור XR ו-3D Modeling */
+.pillar-card:not(:has(.games-loop)):hover .pillar-scan-img.img-1 { animation: scanAndFade1 18s linear infinite; }
+.pillar-card:not(:has(.games-loop)):hover .pillar-scan-img.img-2 { animation: scanAndFade2 18s linear infinite; }
+.pillar-card:not(:has(.games-loop)):hover .pillar-scan-img.img-3 { animation: scanAndFade3 18s linear infinite; }
+
+
+/* ========================================================
+   הפעלת הלופ המיוחד ל-GAMES (חלוקה ל-4 תמונות, 20 שניות סה"כ)
+========================================================== */
+
+.pillar-card:hover .games-loop.img-1 {
+    animation: gamesFourLoop1 20s linear infinite;
+}
+.pillar-card:hover .games-loop.img-2 {
+    animation: gamesFourLoop2 20s linear infinite;
+}
+.pillar-card:hover .games-loop.img-3 {
+    animation: gamesFourLoop3 20s linear infinite;
+}
+.pillar-card:hover .games-loop.img-4 {
+    animation: gamesFourLoop4 20s linear infinite;
+}
+
+/* ========================================================
+   KEYFRAMES ל-GAMES (כל תמונה תופסת 25% מהזמן)
+========================================================== */
+
+/* תמונה 1 (Crazy Like Me): זום + תנועה משמאל לימין */
+@keyframes gamesFourLoop1 {
+    0%   { opacity: 1; transform: scale(1.4) translateX(-10%); } /* מתחיל משמאל */
+    20%  { opacity: 1; }
+    25%  { opacity: 0; transform: scale(1.4) translateX(10%); }  /* מסיים בימין */
+    100% { opacity: 0; }
+}
+
+/* תמונה 2 (Warsaw): זום + אלכסון מלמעלה-שמאלה למטה-ימינה */
+@keyframes gamesFourLoop2 {
+    0%   { opacity: 0; }
+    25%  { opacity: 0; transform: scale(1.4) translate(-10%, -10%); } /* פינה שמאלית עליונה */
+    30%  { opacity: 1; }
+    45%  { opacity: 1; }
+    50%  { opacity: 0; transform: scale(1.4) translate(10%, 10%); }    /* פינה ימנית תחתונה */
+    100% { opacity: 0; }
+}
+
+/* תמונה 3 (Slenderman): זום + תנועה מימין לשמאל */
+@keyframes gamesFourLoop3 {
+    0%   { opacity: 0; }
+    50%  { opacity: 0; transform: scale(1.4) translateX(10%); }  /* מתחיל מימין */
+    55%  { opacity: 1; }
+    70%  { opacity: 1; }
+    75%  { opacity: 0; transform: scale(1.4) translateX(-10%); } /* מסיים בשמאל */
+    100% { opacity: 0; }
+}
+
+/* תמונה 4 (Pirates): זום + אלכסון מנוגד - מימין-למעלה לשמאל-למטה */
+@keyframes gamesFourLoop4 {
+    0%   { opacity: 0; }
+    75%  { opacity: 0; transform: scale(1.4) translate(10%, -10%); }  /* פינה ימנית עליונה */
+    80%  { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; transform: scale(1.4) translate(-10%, 10%); }  /* פינה שמאלית תתונה */
+}
+
+/* תוודא שאתה מוריד את ה-background-size גם מה-Keyframes של ה-3 תמונות (scanAndFade 1-3) */
+/* תמונה 1: זום + תנועה משמאל לימין */
+@keyframes scanAndFade1 {
+    0%   { opacity: 1; transform: scale(1.4) translateX(-10%); }
+    28%  { opacity: 1; }
+    33%  { opacity: 0; transform: scale(1.4) translateX(10%); }
+    100% { opacity: 0; }
+}
+
+/* תמונה 2: זום + אלכסון מימין-למעלה לשמאל-למטה */
+@keyframes scanAndFade2 {
+    0%   { opacity: 0; }
+    33%  { opacity: 0; transform: scale(1.4) translate(10%, -10%); } /* פינה ימנית עליונה */
+    38%  { opacity: 1; }
+    61%  { opacity: 1; }
+    66%  { opacity: 0; transform: scale(1.4) translate(-10%, 10%); }   /* פינה שמאלית תחתונה */
+    100% { opacity: 0; }
+}
+
+/* תמונה 3: זום + אנכי מלמטה למעלה */
+@keyframes scanAndFade3 {
+    0%   { opacity: 0; }
+    66%  { opacity: 0; transform: scale(1.4) translateY(10%); }  /* מתחיל מלמטה */
+    71%  { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; transform: scale(1.4) translateY(-10%); } /* מסיים למעלה */
+}
