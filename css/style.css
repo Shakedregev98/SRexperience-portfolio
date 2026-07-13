@@ -763,22 +763,42 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* גורם ללוגו ולתפריט לשבת אחד מעל השני במקום זה לצד זה */
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        text-align: center;
-        padding: 10px;
+        justify-content: center;
+        padding: 6px 0; /* פדינג קטנטן למעלה ולמטה כדי שהשורה תהיה דקה */
+        background-color: var(--background, #111); /* ודא שיש רקע קבוע כדי שהתוכן לא יצוף מתחתיו */
+        position: relative;
     }
 
+    /* החזרת הלוגו למרכז, ברור ובולט */
+    header .studio-logo, 
+    header div[class*="logo"] { 
+        display: block !important;
+        visibility: visible !important;
+        font-size: 14px;
+        letter-spacing: 0.25em;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+
+    /* סידור כל הלינקים בשורה אחת אופקית, צפופה ונמוכה */
     header nav {
-        display: flex;
-        flex-wrap: wrap; /* גורם ללינקים לרדת שורה אם אין להם מקום */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* מונע ירידת שורה */
         justify-content: center;
-        gap: 10px; /* רווח קטן ונקי בין הלינקים */
-        margin-top: 8px;
+        align-items: center;
+        gap: 12px; /* רווח הדוק בין הלינקים */
+        width: 100%;
+        padding: 2px 0;
     }
 
     header nav a {
-        font-size: 14px; /* מקטין מעט את הטקסט כדי שיכנס ברוחב המסך */
+        font-size: 11px; /* טקסט קטן ויוקרתי שתופס פחות רווח */
+        letter-spacing: 0.1em;
+        white-space: nowrap; /* מונע מהמילים להתפרק לשתי שורות */
     }
 }
 
