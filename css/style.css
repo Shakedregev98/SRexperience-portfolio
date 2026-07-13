@@ -798,7 +798,8 @@ footer {
         left: 20px; /* ממקם אותו בצד שמאל */
         top: 50%;
         transform: translateY(-50%);
-        z-index: 1001;
+        z-index: 9999 !important;
+        pointer-events: auto; /* מאפשר קליקים על הכפתור */
     }
 
     /* שלושת הקווים של ההמבורגר */
