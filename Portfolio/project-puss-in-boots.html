@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puss in Boots: The Last Wish (2022) | Shaked Regev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch">EST. 2023</div>
+        <div class="studio-logo"><a href="index.html" style="text-decoration:none; color:inherit;">S R E X P E R I E N C E &nbsp; S T U D I O </a></div>
+        <nav>
+            <a href="games-hub.html" class="active">Games</a>
+            <a href="XR-hub.html">XR</a>
+            <a href="3d-modeling-hub.html">3D Modeling</a>
+            <a href="about-me.html">About Me</a>
+        </nav>
+    </header>
+
+    <section class="project-hero" style="padding-bottom: 15px;">
+        <div class="project-category-tag">CASE STUDY // PC PLATFORMER PROTOTYPE</div>
+        <h1>Puss in Boots: The Last Wish (2022)</h1>
+        
+        <div class="project-main-media showreel-frame" style="max-height: 55vh; aspect-ratio: 16/9; margin: 0 auto;">
+            <iframe src="https://www.youtube.com/embed/y6Qpxkga12Y?autoplay=1&mute=1&loop=1&playlist=y6Qpxkga12Y" 
+                    title="Puss in Boots Gameplay" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen 
+                    style="width: 100%; height: 100%; display: block; object-fit: cover;">
+            </iframe>
+        </div>
+    </section>
+
+    <section class="project-metadata-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 15px;">
+        <div class="meta-block">
+            <h4>SITUATION & TASK</h4>
+            <p>Developed as a final semester project for an introductory Unity course. While the baseline prompt challenged students to create a standard physics-based Monkey Ball clone, I pivoted the scope to design a custom third-person precision platformer based on a cinematic sequence from Puss in Boots: The Last Wish.</p>
+        </div>
+        
+        <div class="meta-block">
+            <h4>ROLE & SYSTEM</h4>
+            <p>Sole Developer. Responsible for the fundamental gameplay mechanics, input programming, level layout architecture, and aesthetic lookdev. Scripted the hazard detection for the lava field, designed the character interaction triggers, and integrated the victory state system upon reaching the ending landmark.</p>
+        </div>
+        
+        <div class="meta-block">
+            <h4>TECH STACK</h4>
+            <p>Unity, C# Scripting, Character Controller Physics, Animator Controllers, 3D Platforming Logic, Level Design Layout, UI HUD Setup.</p>
+        </div>
+        
+        <div class="meta-block">
+            <h4>PROJECT INFO</h4>
+            <p><strong>Duration:</strong> End of Semester Project.</p>
+            <p><strong>Context:</strong> Unity 101 Course.</p>
+            <p><strong>Try it yourself:</strong> <a href="https://drive.google.com/file/d/1fyOZIKPog3kwvx5v2uU7M0ppnJW3kwkY/view?usp=drive_link" target="_blank" style="color: var(--foreground); text-decoration: underline; font-weight: 500;">Link for Download</a></p>
+        </div>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid #222; margin: 10px 0 15px 0;">
+
+    <section class="breakdown-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1100px; margin: 0 auto 100px auto; padding: 0 50px; align-items: start;">
+        
+        <div class="breakdown-block-vertical">
+            <div class="breakdown-media-box" style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--border); overflow: hidden; background: #111; margin-bottom: 15px;">
+                <img src="Media/Images/Puss in boots 1.png" alt="Puss in Boots Character Controller" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <h3 style="font-size: 20px; font-weight: 300; margin: 0 0 10px 0; letter-spacing: -0.01em;">
+                Humanoid Movement & Animator Architecture
+            </h3>
+            <p style="font-size: 13px; color: var(--muted-foreground); line-height: 1.6; margin: 0;">
+                Pivoted from the standard physics-based ball mechanics required by the course assignment to implement a full Humanoid Character Controller. The core technical challenge was mapping out the custom movement logic for a bipedal character, alongside structuring a clean Animator Controller. I focused on managing smooth blend trees and state transitions to correctly synchronize inputs—implementing standard isGrounded check logic to strictly prevent accidental double-jumps—and ensuring all states flash fluidly with the character's active 3D animations.
+            </p>
+        </div>
+
+        <div class="breakdown-block-vertical">
+            <div class="breakdown-media-box" style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--border); overflow: hidden; background: #111; margin-bottom: 15px;">
+                <img src="Media/Images/Puss in boots 2.png" alt="Puss in Boots Level Hazards" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <h3 style="font-size: 20px; font-weight: 300; margin: 0 0 10px 0; letter-spacing: -0.01em;">
+                Narrative Mechanics & Single-Life Constraint
+            </h3>
+            <p style="font-size: 13px; color: var(--muted-foreground); line-height: 1.6; margin: 0;">
+                Integrated thematic components directly into the gameplay loop by enforcing a strict single-life constraint, mirroring the film's narrative of Puss having only 1 life left. I established custom trigger-volumes spanning across the active lava hazard field. Dropping below the stone pillars immediately trips a defeat condition and resets the scene, forcing the player to master the basic platforming layout to successfully reach the companion NPC at the level's exit.
+            </p>
+        </div>
+
+    </section>
+
+    <footer style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 30px 50px; border-top: 1px solid #111; font-size: 11px; letter-spacing: 0.1em; color: var(--muted-foreground);">
+        <div>© 2026 SHAKED REGUEV</div>
+        <div>3D & UNITY GENERALIST • TEL AVIV / REMOTE</div>
+        <div class="footer-social-icons" style="display: flex; gap: 20px; font-size: 16px;">
+            <a href="mailto:shakedregev98@gmail.com" title="Email" style="color: inherit; transition: color 0.2s;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shaked-regev-0b81412b4" target="_blank" title="LinkedIn" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://artstation.com" target="_blank" title="ArtStation" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

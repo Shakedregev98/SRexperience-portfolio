@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study | Shaked Reguev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header זהה לחלוטין -->
+    <header>
+        <div class="lang-switch">EST. 2023</div>
+        <div class="studio-logo"><a href="index.html" style="text-decoration:none; color:inherit;">S R E X P E R I E N C E &nbsp; S T U D I O </a></div>
+        <nav>
+            <a href="games-hub.html">Games</a>
+            <a href="XR-hub.html">XR</a>
+            <a href="3d-modeling-hub.html">3D Modeling</a>
+            <a href="about-me.html">About Me</a>
+        </nav>
+    </header>
+
+    <!-- אזור כותרת הפרויקט ומדיה ראשית -->
+    <section class="project-hero">
+        <div class="project-category-tag">CASE STUDY // PCVR GAMEPLAY</div>
+        <h1>Eiffel Ascent (2024)</h1>
+        
+        <div class="project-main-media showreel-frame">
+            <iframe 
+                style="width: 100%; height: 100%; border: 0; display: block;"
+                src="https://www.youtube.com/embed/Ju3LE-iMc90?start=0&autoplay=1&mute=1&loop=1&playlist=Ju3LE-iMc90" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- גריד קונטקסט ומטא-דאטה (STAR Method) -->
+    <section class="project-metadata-grid">
+        <div class="meta-block">
+            <h4>SITUATION & TASK</h4>
+            <p>Developed as a co-op project for a degree course. The challenge was to design and implement an intense, high-altitude PCVR climbing experience on the Eiffel Tower, inspired by a mission from Assassin's Creed Unity (ubisoft, 2014), combining physics-based interaction, dynamic AI navigation, and strict optimization pipelines to maintain a flawless high-framerate tethered VR experience.</p>
+        </div>
+        <div class="meta-block">
+            <h4>ROLE & SYSTEM</h4>
+            <p>Technical Artist & Co-Developer (Team of 2). Co-engineered the physics-driven climbing mechanics. Responsible for the practical implementation of the level design layout, building the visual asset and texturing pipeline, configuring spatial systems like AI NavMesh, and executing runtime PCVR optimization.</p>
+        </div>
+        <div class="meta-block">
+            <h4>TECH STACK</h4>
+            <p>Unity, C# Scripting, PCVR Deployment, VR Interaction Framework (VRIF), Unity AI NavMesh, Photoshop (Alpha Maps / Albedo texturing), Baked Lighting pipelines, Static/Dynamic Batching, VR Sockets.</p>
+        </div>
+        <div class="meta-block">
+            <h4>PROJECT INFO</h4>
+            <p><strong>Duration:</strong> 1 Academic Semester.</p>
+            <p><strong>Context:</strong> New digital platform formats.</p>
+            <p><strong>Try it yourself:</strong><a href="https://drive.google.com/file/d/1vEWHpC9S7gjuOHtzBv5zxPBkfrpejjiJ/view?usp=drive_link" target="_blank" style="color: var(--foreground); text-decoration: underline; font-weight: 500;">Link for Download</a></p>
+        </div>
+    </section>
+
+    </section> <hr style="border: 0; border-top: 1px solid #222; margin: 45px 0;">
+
+    <!-- חלק ה-Interactive Tech Showcase (הסליידר של הלפני ואחרי) -->
+    <section class="breakdown-grid two-columns">
+        
+        <div class="breakdown-card">
+            <div class="breakdown-media-box">
+                 <img src="Media/Images/ClimbGIF.gif" alt="VR Climbing Physics Mechanism" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="breakdown-content">
+                <h3>Physics-Based Mechanics & Systems</h3>
+                <p>Co-developed the core physics climbing locomotion. Personally implemented Unity's VR Socket systems for seamless object snapping and interaction. Additionally helped integrated AI NavMesh architecture to manage dynamic environmental systems aligned with the co-developer's level design structure.</p>
+            </div>
+        </div>
+
+        <div class="breakdown-card">
+            <div class="breakdown-media-box">
+                <img src="Media/Images/Eiffle Ascent.png" alt="PCVR Environment & Lighting Optimization" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="breakdown-content">
+                <h3>Tech Art Pipeline & Optimization</h3>
+                <p>Designed a performant visual pipeline tailored for high-fidelity PCVR rendering across expansive environments. Utilized Photoshop to embed precise Alpha texture maps into the Albedo channels for modeles like the haystack. In order to maintain high framerate across the entire complex campsite we baked advanced global illumination and leveraged Unity's batching tools to drastically minimize draw calls.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- פוטר גלובלי -->
+    <footer style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 30px 50px; border-top: 1px solid #111; font-size: 11px; letter-spacing: 0.1em; color: var(--muted-foreground);">
+        <div>© 2026 SHAKED REGUEV</div>
+        <div>3D & UNITY GENERALIST • TEL AVIV / REMOTE</div>
+        <div class="footer-social-icons" style="display: flex; gap: 20px; font-size: 16px;">
+            <a href="mailto:shakedregev98@gmail.com" title="Email" style="color: inherit; transition: color 0.2s;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shaked-regev-0b81412b4" target="_blank" title="LinkedIn" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://artstation.com" target="_blank" title="ArtStation" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+    </footer>
+
+    <!-- לוגיקת ה-JavaScript של הסליידר האינטראקטיבי -->
+    <script src="js/main.js"></script>
+</body>
+</html>

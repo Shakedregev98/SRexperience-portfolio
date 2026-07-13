@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study | Shaked Reguev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header זהה לחלוטין -->
+    <header>
+        <div class="lang-switch">EST. 2023</div>
+        <div class="studio-logo"><a href="index.html" style="text-decoration:none; color:inherit;">S R E X P E R I E N C E &nbsp; S T U D I O </a></div>
+        <nav>
+            <a href="games-hub.html">Games</a>
+            <a href="XR-hub.html">XR</a>
+            <a href="3d-modeling-hub.html">3D Modeling</a>
+            <a href="about-me.html">About Me</a>
+        </nav>
+    </header>
+
+    <!-- אזור כותרת הפרויקט ומדיה ראשית -->
+<section class="project-hero" style="padding-bottom: 0; margin-bottom: 10px;">
+        <div class="project-category-tag">CASE STUDY // MOBILE AR</div>
+        <h1 style="margin-bottom: 15px;">MemoriAR (2023)</h1>
+        
+        <div class="phone-mockup">
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                controls
+                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <source src="Media/vidoes/MemorieAR.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+<section class="project-metadata-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 15px;">
+        <div class="meta-block">
+            <h4>SITUATION & TASK</h4>
+            <p>Following October 7th, 2023, there was a profound need for public commemoration when physical monuments couldn't be built. Developed for Google's Immersive Geospatial Challenge, the task was to create a rapid mobile AR prototype that allows anchoring digital monuments in meaningful locations.</p>
+        </div>
+        <div class="meta-block">
+            <h4>ROLE & SYSTEM</h4>
+            <p>Co-Developer & 3D Tech Artist (Team of 3). Responsible for the AR integration pipeline, implementing geospatial positioning, designing spatial gameplay logic, creating the 3D assets, and configuring mobile-optimized visual effects.</p>
+        </div>
+        <div class="meta-block">
+            <h4>TECH STACK</h4>
+            <p>Unity, Google Geospatial API, Cesium for Unity, VFX Graph, Custom Shading (Edge/Hologram Shader), Mobile AR (Android/iOS), 3D Modeling (Autodesk Maya).</p>
+        </div>
+         <div class="meta-block">
+            <h4>PROJECT INFO</h4>
+            <p><strong>Duration:</strong> 1 Month.</p>
+            <p><strong>Context:</strong> Google's Immersive Geospatial Challenge .</p>
+        </div>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid #222; margin: 15px 0 10px 0;">
+
+    <section class="breakdown-grid three-columns">
+        
+        <div class="breakdown-card">
+            <div class="breakdown-media-box">
+                <img src="Media/Images/memoriar 1.jpeg" alt="Geospatial Alignment" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="breakdown-content">
+                <h3>Geospatial AR Alignment</h3>
+                <p>Integrated Google's Immersive Geospatial API with the Cesium plugin inside Unity. Developed the logic to map real-world GPS coordinates into runtime Unity world space, ensuring precise anchoring of digital monuments in public spaces.</p>
+            </div>
+        </div>
+
+        <div class="breakdown-card">
+            <div class="breakdown-media-box">
+                <img src="Media/Images/Memoriar 2.jpeg" alt="VFX and Shaders" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+            <div class="breakdown-content">
+                <h3>VFX & Custom Shading</h3>
+                <p>Developed a custom holographic edge shader to give the main digital monument its solemn, ethereal look. Combined the shader with a stylized particle network inside Unity's VFX Graph to simulate dynamic, flowing lines of light that form the monument's structure in real time.</p>
+            </div>
+        </div>
+
+        <div class="breakdown-card">
+            <div class="breakdown-media-box">
+                <img src="Media/Images/Memoriar 3.png" alt="Spatial Logic" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="breakdown-content">
+                <h3>Mobile AR Prototyping & UI</h3>
+                <p>Designed a clean mobile interface prioritizing real-world user interaction. Engineered the system logic to handle real-time inputs—allowing users to seamlessly select and cast interaction triggers (like placing a candle or writing messages) within a controlled spatial radius around the monument.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- פוטר גלובלי -->
+   <footer style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 30px 50px; border-top: 1px solid #111; font-size: 11px; letter-spacing: 0.1em; color: var(--muted-foreground);">
+        <div>© 2026 SHAKED REGUEV</div>
+        <div>3D & UNITY GENERALIST • TEL AVIV / REMOTE</div>
+        <div class="footer-social-icons" style="display: flex; gap: 20px; font-size: 16px;">
+            <a href="mailto:shakedregev98@gmail.com" title="Email" style="color: inherit; transition: color 0.2s;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shaked-regev-0b81412b4" target="_blank" title="LinkedIn" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://artstation.com" target="_blank" title="ArtStation" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+    </footer>
+
+    <!-- לוגיקת ה-JavaScript של הסליידר האינטראקטיבי -->
+    <script src="js/main.js"></script>
+</body>
+</html>

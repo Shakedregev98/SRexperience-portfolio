@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | SRExperience Studio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- קישור לפונט אייקונים פשוט (FontAwesome) בשביל הפוטר/אבוט -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch">EST. 2023</div>
+        <div class="studio-logo"><a href="index.html" style="text-decoration:none; color:inherit;">S R E X P E R I E N C E &nbsp; S T U D I O </a></div>
+        <nav>
+            <a href="games-hub.html">Games</a>
+            <a href="XR-hub.html">XR</a>
+            <a href="3d-modeling-hub.html">3D Modeling</a>
+            <a href="about-me.html" class="active">About Me</a>
+        </nav>
+    </header>
+
+   <!-- הגדלת ה-margin העליון ל-160px כדי לתת אוויר מה-Header -->
+    <!-- החזרנו את ה-margin ל-80px המקורקע, והוספנו padding-top פנימי כדי לייצר את המרווח בשחור -->
+    <main style="max-width: 1100px; margin: 80px auto; padding: 80px 50px 0 50px;">
+        
+        <!-- הגריד של האבוט עם ריווח של 80px בין התמונה לטקסט -->
+        <!-- שינוי ה-align-items ל-center בשביל מרכוז אנכי מושלם של התמונה הריבועית -->
+        <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: center;">
+            
+            <!-- טור שמאל: תמונה -->
+            <div class="about-profile-box" style="position: relative;">
+                <img src="Media/Images/profile Pic.png" alt="Shaked Reguev" style="width: 100%; height: auto; object-fit: cover; filter: grayscale(20%); border: 1px solid #222;">
+            </div>
+
+            <!-- טור ימין: טקסט -->
+            <div class="about-text-box" style="padding-top: 10px;">
+                <div class="project-category-tag" style="margin-bottom: 20px; font-size: 11px; letter-spacing: 0.2em; color: var(--muted-foreground);">// THE ARTIST BEHIND THE STUDIO</div>
+                <h1 style="font-size: 38px; font-weight: 300; letter-spacing: -0.01em; margin: 0 0 35px 0; color: #ffffff;">Shaked Reguev</h1>
+                
+                <div style="font-size: 14px; line-height: 1.8; color: #a0a0a0; display: flex; flex-direction: column; gap: 24px;">
+                    <p>
+                        Shaked Reguev is a versatile 3D and Unity Generalist with a strong technical background, specialized in developing interactive applications, games, and immersive digital environments. Holding a B.A. in Film and TV Studies and an M.F.A. in Digital Media from Tel Aviv University, where he was recognized on the Dean’s Honor List, Shaked seamlessly bridges the gap between cinematic storytelling and hands-on technical execution.
+                    </p>
+                    <p>
+                        Adopting a full-stack generalist workflow, his expertise covers the entire production pipeline inside Unity, including environmental design, custom Shader Graph development, animation management, and interactive scripting. Proficient in both hard-surface and organic 3D modeling using Autodesk Maya and Substance Painter, Shaked focuses on creating clean, optimized, and production-ready assets tailored for modern real-time engines.
+                    </p>
+                    <p>
+                        Alongside his independent creative business, <strong>SRExperience Studio</strong>, Shaked brings a keen eye for detail, creative direction, and client-level quality assurance to every project. In 2024, he curated and managed the Digital Media Exhibition and competition at the Tel Aviv International Student Film Festival (TISFF), overseeing everything from artistic curation and narrative design to logistical coordination and technical setup. This experience granted him a macro-level understanding of complex production workflows, cross-discipline collaboration, and large-scale experiential design.
+                    </p>
+                </div>
+
+                <!-- כפתור הורדת קורות חיים -->
+                <div style="margin-top: 45px;">
+                    <a href="Media/Docs/CV - Shaked Reguev.pdf" download class="cv-download-btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease;">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume / CV
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- הגדלת הריווח מסביב לקו המפריד -->
+        <hr style="border: 0; border-top: 1px solid #222; margin: 100px 0 80px 0;">
+
+        <!-- אזור יצירת קשר -->
+        <div class="contact-cta-section" style="text-align: center; max-width: 700px; margin: 0 auto; padding-bottom: 60px;">
+            <h3 style="font-size: 24px; font-weight: 300; letter-spacing: -0.01em; margin-bottom: 20px; color: #ffffff;">Let's Build Cool Things Together</h3>
+            <p style="font-size: 14px; color: #a0a0a0; line-height: 1.6; margin-bottom: 35px;">
+                Whether you have a project in mind, a pipeline bottleneck to solve, or want to collaborate on the next frontier of digital media—I’m always open to compelling opportunities. Reach out via your preferred channel:
+            </p>
+            
+            <div class="contact-buttons-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="mailto:shakedregev98@gmail.com" style="display: flex; align-items: center; gap: 8px; padding: 12px 20px; background-color: #111; border: 1px solid #222; color: #fff; text-decoration: none; font-size: 13px; border-radius: 4px; transition: background 0.2s;">
+                    <i class="fa-regular fa-envelope" style="color: #a0a0a0;"></i> shakedregev98@gmail.com
+                </a>
+                <a href="https://wa.me/972500000000" target="_blank" style="display: flex; align-items: center; gap: 8px; padding: 12px 20px; background-color: #111; border: 1px solid #222; color: #fff; text-decoration: none; font-size: 13px; border-radius: 4px; transition: background 0.2s;">
+                    <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Message on WhatsApp
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- פוטר מינימליסטי מעודכן עם אייקונים -->
+    <footer style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 30px 50px; border-top: 1px solid #111; font-size: 11px; letter-spacing: 0.1em; color: var(--muted-foreground);">
+        <div>© 2026 SHAKED REGUEV</div>
+        <div>3D & UNITY GENERALIST • TEL AVIV / REMOTE</div>
+        <div class="footer-social-icons" style="display: flex; gap: 20px; font-size: 16px;">
+            <a href="mailto:shakedregev98@gmail.com" title="Email" style="color: inherit; transition: color 0.2s;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shaked-regev-0b81412b4" target="_blank" title="LinkedIn" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://artstation.com" target="_blank" title="ArtStation" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

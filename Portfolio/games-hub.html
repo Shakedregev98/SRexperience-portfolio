@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Portfolio | Shaked Reguev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch">EST. 2023</div>
+        <div class="studio-logo"><a href="index.html" style="text-decoration:none; color:inherit;">S R E X P E R I E N C E &nbsp; S T U D I O </a></div>
+        <nav>
+            <a href="games-hub.html" class="active" style="color: var(--foreground);">Games</a>
+            <a href="XR-hub.html">XR</a>
+            <a href="3d-modeling-hub.html">3D Modeling</a>
+            <a href="about-me.html">About Me</a>
+        </nav>
+    </header>
+
+    <section class="category-hero">
+        <div class="category-meta">01 / CATEGORY</div>
+        <h1>Games</h1>
+        <p class="category-desc">Real-time interactive experiences, immersive environment design, and technical art integration developed in Unity.</p>
+    </section>
+
+    <section class="projects-section">
+            <div class="projects-grid">
+                
+                <a href="project-crazy-like-me.html" class="project-item-card">
+                    <div class="project-thumb-wrapper">
+                        <div class="project-thumb" style="background-image: url('Media/Images/Crazy\ like\ me\ tumbnail.png');"></div>
+                    </div>
+                    <div class="project-meta-info">
+                        <span class="project-number">01 // PROJECT</span>
+                        <h3>Crazy Like Me (2024)</h3>
+                        <p class="project-tech-stack">Unity • Level Design • Puzzle Systems</p>
+                    </div>
+                </a>
+
+                <a href="project-warsaw-uprising.html" class="project-item-card">
+                    <div class="project-thumb-wrapper">
+                        <div class="project-thumb" style="background-image: url('Media/Images/warsaw\ tumbnail.png');"></div>
+                    </div>
+                    <div class="project-meta-info">
+                        <span class="project-number">02 // PROJECT</span>
+                        <h3>The Warsaw Uprising (2024)</h3>
+                        <p class="project-tech-stack">Unity • Environment Design • Real-time VFX</p>
+                    </div>
+                </a>
+                
+                <a href="project-slenderman.html" class="project-item-card">
+                    <div class="project-thumb-wrapper">
+                        <div class="project-thumb" style="background-image: url('Media/Images/slenderman-tumbnail.png');"></div>
+                    </div>
+                    <div class="project-meta-info">
+                        <span class="project-number">03 // PROJECT</span>
+                        <h3>Slenderman: Sins of the Garrison (2023)</h3>
+                        <p class="project-tech-stack">Unity • Atmosphere & Sound • Terrain Layout</p>
+                    </div>
+                </a>
+
+                <a href="project-pirates.html" class="project-item-card">
+                    <div class="project-thumb-wrapper">
+                        <div class="project-thumb" style="background-image: url('Media/Images/pirates\ tumbnail.png');"></div>
+                    </div>
+                    <div class="project-meta-info">
+                        <span class="project-number">04 // PROJECT</span>
+                        <h3>Pirates of the High Seas (2023)</h3>
+                        <p class="project-tech-stack">Unity • Custom Shaders • Boss Fight Environment</p>
+                    </div>
+                </a>
+
+
+                <!-- כרטיס פרויקט מצונזר ומאובטח -->
+                <a href="#" onclick="openSecretProject(event)" class="project-item-card" style="cursor: pointer;">
+                    <div class="project-thumb-wrapper" style="position: relative; overflow: hidden;">
+                        <!-- שימוש ב-filter כדי להכהות ולטשטש את התמונה המקורית, מה שיוצר מראה "חסוי" -->
+                        <div class="project-thumb" style="background-image: url('Media/Images/Puss\ in\ boots\ tumbnail.png'); filter: blur(15px) brightness(0.2) grayscale(100%);"></div>
+                        <!-- אייקון מנעול קטן שצף במרכז הטאמבנייל -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ff3333; font-size: 24px; opacity: 0.6; letter-spacing: 0.1em;">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="project-meta-info">
+                        <span class="project-number" style="color: #ff3333;">05 // PROJECT</span>
+                        <h3 style="font-family: monospace; letter-spacing: 0.05em; color: #eee;">Classified Project</h3>
+                        <p class="project-tech-stack"יו>Unity • Character Controller • Core Mechanics</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- פופ-אפ צנזורה נרטיבית סודית -->
+    <div id="crypto-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(5, 5, 5, 0.95); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(8px);">
+        <div style="background-color: #111; border: 1px solid #222; padding: 40px; max-width: 500px; width: 90%; text-align: center; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+            
+            <div style="font-size: 24px; color: #ff3333; margin-bottom: 20px;">
+                <i class="fa-solid fa-lock" style="letter-spacing: 0.1em;"></i> [REDACTED]
+            </div>
+            
+            <h3 style="font-size: 18px; font-weight: 300; margin-bottom: 15px; letter-spacing: 0.05em; color: #fff;">Restricted Access Project</h3>
+            
+            <p style="font-size: 13px; line-height: 1.6; color: #888; margin-bottom: 25px;">
+                Due to strictly enforced copyright regulations, this real-time gameplay demo based on a major Hollywood IP cannot be displayed publicly. Available for private viewing upon request.
+            </p>
+            
+            <!-- שדה סיסמה וכפתור -->
+            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin: 0 auto;">
+                <input type="password" id="project-password" placeholder="Enter Access Code" style="background-color: #000; border: 1px solid #333; padding: 12px; color: #fff; text-align: center; font-size: 14px; letter-spacing: 0.1em; border-radius: 4px; outline: none;">
+                <div id="password-error" style="color: #ff3333; font-size: 11px; display: none; letter-spacing: 0.05em;">INVALID ACCESS CODE</div>
+                <button id="submit-password-btn" style="background-color: transparent; border: 1px solid #ffffff; color: #ffffff; padding: 12px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; border-radius: 4px;">
+                    Decrypt Access
+                </button>
+            </div>
+            
+            <!-- כפתור סגירה קטן -->
+            <button id="close-modal-btn" style="background-color: transparent; border: none; color: #555; margin-top: 25px; font-size: 11px; cursor: pointer; text-decoration: underline; letter-spacing: 0.05em;">
+                Return to Hub
+            </button>
+        </div>
+    </div>
+
+    <footer style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 30px 50px; border-top: 1px solid #111; font-size: 11px; letter-spacing: 0.1em; color: var(--muted-foreground);">
+        <div>© 2026 SHAKED REGUEV</div>
+        <div>3D & UNITY GENERALIST • TEL AVIV / REMOTE</div>
+        <div class="footer-social-icons" style="display: flex; gap: 20px; font-size: 16px;">
+            <a href="mailto:shakedregev98@gmail.com" title="Email" style="color: inherit; transition: color 0.2s;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shaked-regev-0b81412b4" target="_blank" title="LinkedIn" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://artstation.com" target="_blank" title="ArtStation" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("crypto-modal");
+    const passwordInput = document.getElementById("project-password");
+    const submitBtn = document.getElementById("submit-password-btn");
+    const closeBtn = document.getElementById("close-modal-btn");
+    const errorMsg = document.getElementById("password-error");
+
+    // הלינק הסודי שאליו תרצה להפנות (שם העמוד של חתול במגפיים)
+    const SECRET_URL = "project-puss-in-boots.html"; 
+    // הסיסמה שבחרת (תשנה למה שבא לך)
+    const CORRECT_PASSWORD = "PIB2022"; 
+
+    // פונקציה לפתיחת הפופ-אפ (תקרא לה בלחיצה על הכרטיס)
+    window.openSecretProject = (e) => {
+        if (e) e.preventDefault();
+        modal.style.display = "flex";
+        passwordInput.focus();
+    };
+
+    // בדיקת סיסמה
+    const checkPassword = () => {
+        if (passwordInput.value === CORRECT_PASSWORD) {
+            errorMsg.style.display = "none";
+            window.location.href = SECRET_URL; // מעביר לעמוד הסודי
+        } else {
+            errorMsg.style.display = "block"; // מציג שגיאה
+            passwordInput.value = "";
+            passwordInput.focus();
+        }
+    };
+
+    // האזנה ללחיצה על כפתור האנטר או כפתור ה-Submit
+    submitBtn.addEventListener("click", checkPassword);
+    passwordInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") checkPassword();
+    });
+
+    // סגירת הפופ-אפ
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        errorMsg.style.display = "none";
+        passwordInput.value = "";
+    });
+    });
+    </script>
+</body>
+</html>

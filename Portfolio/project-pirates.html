@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirates of the High Seas (2023) | Shaked Regev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch">EST. 2023</div>
+        <div class="studio-logo"><a href="index.html" style="text-decoration:none; color:inherit;">S R E X P E R I E N C E &nbsp; S T U D I O </a></div>
+        <nav>
+            <a href="games-hub.html" class="active">Games</a>
+            <a href="XR-hub.html">XR</a>
+            <a href="3d-modeling-hub.html">3D Modeling</a>
+            <a href="about-me.html">About Me</a>
+        </nav>
+    </header>
+
+    <section class="project-hero" style="padding-bottom: 15px;">
+        <div class="project-category-tag">CASE STUDY // PC ACTION-ADVENTURE</div>
+        <h1>Pirates of the High Seas (2023)</h1>
+        
+        <div class="project-main-media showreel-frame" style="max-height: 55vh; aspect-ratio: 16/9; margin: 0 auto;">
+            <video autoplay muted loop playsinline controls style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <source src="Media/vidoes/Pirates of the High seas 2023-08-02 08-51-36.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="project-metadata-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 15px;">
+        <div class="meta-block">
+            <h4>SITUATION & TASK</h4>
+            <p>Developed as a collaborative academic project focused on creating a compelling, mechanics-driven Boss Fight encounter. The challenge was to build a high-fidelity cinematic arena that seamlessly transitions from environmental puzzle-solving into intense third-person melee combat, requiring tight coordination between level art and gameplay programming.</p>
+        </div>
+        
+        <div class="meta-block">
+            <h4>ROLE & SYSTEM</h4>
+            <p>Technical Artist & Lead Environment Designer (Team of 2). Responsible for the complete world-building pipeline, including terrain sculpting, custom lookdev, and prop modeling. Developed specialized technical art assets, including custom lava and glowing orb shaders, expanded the character controller capabilities, and orchestrated the cinematic sequence using Unity Timeline and Cinemachine.</p>
+        </div>
+        
+        <div class="meta-block">
+            <h4>TECH STACK</h4>
+            <p>Unity, Custom Shaders (HLSL/Shader Graph), Terrain Tools, 3D Modeling, Unity Timeline, Cinemachine Integration, Character Controller, Particle Systems.</p>
+        </div>
+        
+        <div class="meta-block">
+            <h4>PROJECT INFO</h4>
+            <p><strong>Duration:</strong> 1 Academic Semester.</p>
+            <p><strong>Context:</strong> Advanced Game Design & Tech Art Course.</p>
+            <p><strong>Try it yourself:</strong> <a href="https://drive.google.com/file/d/1MSNUX38T_Q9mpkAeA47Cbj08XPJcTGPC/view?usp=drive_link" target="_blank" style="color: var(--foreground); text-decoration: underline; font-weight: 500;">Link for Download</a></p>
+        </div>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid #222; margin: 10px 0 15px 0;">
+
+<section class="breakdown-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1100px; margin: 0 auto 100px auto; padding: 0 50px; align-items: start;">
+        
+        <div class="slider-container-wrapper">
+            <div class="before-after-container" id="slendermanSlider" style="width: 100%; aspect-ratio: 16 / 9; position: relative; border: 1px solid var(--border); overflow: hidden;">
+                <div class="slider-img img-before" style="background-image: url('Media/Images/POTHB before.png');"></div>
+                <div class="slider-img img-after" style="background-image: url('Media/Images/POTHB after.png');"></div>
+                
+                <div class="slider-handle">
+                    <div class="handle-line"></div>
+                    <div class="handle-button">↔</div>
+                    <div class="handle-line"></div>
+                </div>
+            </div>
+            <p style="font-size: 11px; color: var(--muted-foreground); margin-top: 8px; text-align: center; letter-spacing: 0.05em;">
+                * Click and drag the slider to compare base environment mesh with active lava shader and lighting
+            </p>
+        </div>
+
+        <div class="breakdown-content" style="padding: 0;">
+            <div class="breakdown-block" style="margin-bottom: 25px;">
+                <h3 style="font-size: 20px; font-weight: 300; margin: 0 0 10px 0; letter-spacing: -0.01em;">
+                    Tech Art & Environmental Shaders
+                </h3>
+                <p style="font-size: 13px; color: var(--muted-foreground); line-height: 1.6; margin: 0;">
+                    Sculpted and vertex-painted the claustrophobic volcanic arena using Unity's Terrain tools, modeling specific focal assets to fit the dark fantasy pirate aesthetic. I also created a custom scrolling lava shader with dynamic emissive properties to heighten the atmosphere of the boss fight
+                </p>
+            </div>
+
+            <div class="breakdown-block">
+                <h3 style="font-size: 20px; font-weight: 300; margin: 0 0 10px 0; letter-spacing: -0.01em;">
+                    Timeline & Cinemachine Integration
+                </h3>
+                <p style="font-size: 13px; color: var(--muted-foreground); line-height: 1.6; margin: 0;">
+                    Designed a structured, sequential gameplay loop spread across 5 distinct scenes to manage the narrative tension. The game transitions smoothly from the initial playable exploration into a scripted cutscene when placing the orb, shifting to a cinematic deck sequence, followed by a pre-fight cinematic build-up, and finally dropping the player into the active playable boss fight. This scene-based pipeline completely avoids complex input-blocking code by isolating active gameplay states from custom Unity Timeline and Cinemachine animations.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+   <footer style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 30px 50px; border-top: 1px solid #111; font-size: 11px; letter-spacing: 0.1em; color: var(--muted-foreground);">
+        <div>© 2026 SHAKED REGUEV</div>
+        <div>3D & UNITY GENERALIST • TEL AVIV / REMOTE</div>
+        <div class="footer-social-icons" style="display: flex; gap: 20px; font-size: 16px;">
+            <a href="mailto:shakedregev98@gmail.com" title="Email" style="color: inherit; transition: color 0.2s;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shaked-regev-0b81412b4" target="_blank" title="LinkedIn" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://artstation.com" target="_blank" title="ArtStation" style="color: inherit; transition: color 0.2s;"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
