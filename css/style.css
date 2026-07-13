@@ -761,44 +761,107 @@ footer {
     }
 }
 
+/* עיצוב המבורגר ומובייל */
 @media (max-width: 768px) {
     header {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: center;
-        justify-content: center;
-        padding: 6px 0; /* פדינג קטנטן למעלה ולמטה כדי שהשורה תהיה דקה */
-        background-color: var(--background, #111); /* ודא שיש רקע קבוע כדי שהתוכן לא יצוף מתחתיו */
+        justify-content: center; /* ממרכז את הלוגו */
         position: relative;
+        padding: 15px 20px;
+        height: 60px;
+        box-sizing: border-box;
     }
 
-    /* החזרת הלוגו למרכז, ברור ובולט */
-    header .studio-logo, 
-    header div[class*="logo"] { 
-        display: block !important;
-        visibility: visible !important;
+    /* מחביא את שורת ה-EST */
+    header .lang-switch, 
+    header span:contains("EST"),
+    header div:contains("EST") { 
+        display: none !important; 
+    }
+
+    /* קיבוע הלוגו במרכז */
+    header .studio-logo {
         font-size: 14px;
-        letter-spacing: 0.25em;
-        margin-bottom: 4px;
+        letter-spacing: 0.2em;
+        text-align: center;
+        margin: 0 !important;
+    }
+
+    /* עיצוב כפתור ההמבורגר בצד שמאל */
+    .hamburger-menu {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        left: 20px; /* ממקם אותו בצד שמאל */
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    /* שלושת הקווים של ההמבורגר */
+    .hamburger-menu .bar {
+        width: 100%;
+        height: 2px;
+        background-color: var(--foreground, #fff); /* צבע הקווים */
+        transition: all 0.3s ease;
+    }
+
+    /* החבאת תפריט הניווט המקורי והפיכתו למסך מלא נפתח */
+    header .nav-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed;
+        top: 60px; /* נפתח בדיוק מתחת לבר העליון */
+        left: -100%; /* מחביא אותו מחוץ למסך בצד שמאל */
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: var(--background, #0b0b0b); /* צבע רקע אטום לתפריט */
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        gap: 30px !important;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* הלינקים בתוך התפריט הפתוח */
+    header .nav-menu a {
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        width: auto;
         text-align: center;
     }
 
-    /* סידור כל הלינקים בשורה אחת אופקית, צפופה ונמוכה */
-    header nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important; /* מונע ירידת שורה */
-        justify-content: center;
-        align-items: center;
-        gap: 12px; /* רווח הדוק בין הלינקים */
-        width: 100%;
-        padding: 2px 0;
+    /* קלאס שייפתח את התפריט (יופעל ע"י ה-JS) */
+    header .nav-menu.active {
+        left: 0; /* דוחף את התפריט לתוך המסך */
     }
 
-    header nav a {
-        font-size: 11px; /* טקסט קטן ויוקרתי שתופס פחות רווח */
-        letter-spacing: 0.1em;
-        white-space: nowrap; /* מונע מהמילים להתפרק לשתי שורות */
+    /* אפקט הפיכת ההמבורגר ל-X כשהתפריט פתוח */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* במחשב - כפתור ההמבורגר תמיד מוסתר */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none !important;
     }
 }
 

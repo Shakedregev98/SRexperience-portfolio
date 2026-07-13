@@ -53,4 +53,24 @@ document.addEventListener("DOMContentLoaded", () => {
             isDragging = false;
         });
     });
+    
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) { // הגנה קטנה למקרה שאין המבורגר בעמוד
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 });
