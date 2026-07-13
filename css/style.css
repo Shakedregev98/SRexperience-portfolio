@@ -786,24 +786,27 @@ footer {
         text-align: left; /* שומר על יישור הטקסט הטכני בצורה קריאה */
     }
 
-/* התאמת אזור המדיה (תמונה/גיף/וידאו) */
+    /* הגדרת התיבה במובייל - גובה גבוה שמכריח Zoom In על התמונה */
     .breakdown-media-box {
         border-left: none !important;
         border-top: 1px solid var(--border) !important;
         width: 100% !important;
-        /* משחררים את הגובה הקשיח ומגדירים יחס גובה-רוחב כמו של מסך מחשב */
-        height: auto !important; 
-        aspect-ratio: 16 / 9 !important; /* גורם לבוקס להתנהג כמלבן רחב באופן דינמי */
+        max-width: 100% !important;
+        height: 340px !important; /* גובה משמעותי שמאלץ את התוכן הפנימי להישאר גדול */
+        aspect-ratio: unset !important; /* מבטל את היחסים הקודמים */
         overflow: hidden !important;
         display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* מתיחה מלאה של התמונה ב-cover בלי עיוותים */
+    /* מתיחה מלאה ב-Cover כדי להגדיל את הפרטים במרכז */
     .breakdown-media-box img {
         width: 100% !important;
         height: 100% !important; 
-        object-fit: cover !important; /* מכסה את כל השטח בצורה אלגנטית ומלאה */
-        object-position: center center !important; 
+        object-fit: cover !important; /* חותך את הצידיים ומגדיל את המרכז */
+        object-position: center center !important; /* מתמקד בבול באמצע של הגרף/ממשק */
+        display: block !important;
     }
 }
 
