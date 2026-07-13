@@ -788,17 +788,20 @@ footer {
 
     /* התאמת אזור המדיה (תמונה/גיף/וידאו) */
     .breakdown-media-box {
-        border-left: none !important; /* מעלים את הקו המפריד הצידי של המחשב */
-        border-top: 1px solid var(--border) !important; /* הופך אותו לקו מפריד עליון/תחתון נקי */
+        border-left: none !important;
+        border-top: 1px solid var(--border) !important;
         width: 100% !important;
-        height: auto !important;
-        min-height: 200px; /* נותן נפח מינימלי למדיה */
+        height: 240px !important; /* קובע גובה פרופורציונלי מצוין למובייל */
+        overflow: hidden !important;
+        display: block !important;
     }
 
+    /* מתיחה מלאה של התמונה ב-cover בלי עיוותים */
     .breakdown-media-box img {
-        width: 100% !important; /* מכריח את תמונת הטיימליין/מדיה להתאים לרוחב הנייד */
-        height: auto !important;
-        object-fit: cover !important;
+        width: 100% !important;
+        height: 100% !important; /* מכריח את התמונה למלא את כל ה-240px גובה */
+        object-fit: cover !important; /* מכסה את כל השטח בצורה אלגנטית, כמו במחשב */
+        object-position: center center !important; /* ממרכז את החיתוך כדי שהסנטר של התמונה יישאר בפנים */
     }
 }
 
