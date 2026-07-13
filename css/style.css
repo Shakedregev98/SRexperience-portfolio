@@ -786,12 +786,14 @@ footer {
         text-align: left; /* שומר על יישור הטקסט הטכני בצורה קריאה */
     }
 
-    /* התאמת אזור המדיה (תמונה/גיף/וידאו) */
+/* התאמת אזור המדיה (תמונה/גיף/וידאו) */
     .breakdown-media-box {
         border-left: none !important;
         border-top: 1px solid var(--border) !important;
         width: 100% !important;
-        height: 240px !important; /* קובע גובה פרופורציונלי מצוין למובייל */
+        /* משחררים את הגובה הקשיח ומגדירים יחס גובה-רוחב כמו של מסך מחשב */
+        height: auto !important; 
+        aspect-ratio: 16 / 9 !important; /* גורם לבוקס להתנהג כמלבן רחב באופן דינמי */
         overflow: hidden !important;
         display: block !important;
     }
@@ -799,9 +801,9 @@ footer {
     /* מתיחה מלאה של התמונה ב-cover בלי עיוותים */
     .breakdown-media-box img {
         width: 100% !important;
-        height: 100% !important; /* מכריח את התמונה למלא את כל ה-240px גובה */
-        object-fit: cover !important; /* מכסה את כל השטח בצורה אלגנטית, כמו במחשב */
-        object-position: center center !important; /* ממרכז את החיתוך כדי שהסנטר של התמונה יישאר בפנים */
+        height: 100% !important; 
+        object-fit: cover !important; /* מכסה את כל השטח בצורה אלגנטית ומלאה */
+        object-position: center center !important; 
     }
 }
 
