@@ -795,11 +795,6 @@ footer {
         min-height: 200px; /* נותן נפח מינימלי למדיה */
     }
 
-    .breakdown-media-box img {
-        width: 100% !important; /* מכריח את תמונת הטיימליין/מדיה להתאים לרוחב הנייד */
-        height: auto !important;
-        object-fit: contain !important;
-    }
 }
 
 /* --- מסכים קטנים מאוד (600px ומטה) --- */
